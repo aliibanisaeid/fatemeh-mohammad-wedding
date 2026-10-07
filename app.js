@@ -74,7 +74,7 @@ function openInvitation() {
   }
   setState("opening");
   motionStatus.textContent = "در حال باز شدن دعوت‌نامه";
-  openingTimer = window.setTimeout(showInvitation, motionDuration("--envelope-opening-duration", 4100));
+  openingTimer = window.setTimeout(showInvitation, motionDuration("--envelope-opening-duration", 4650));
 }
 
 openButton.addEventListener("click", openInvitation);

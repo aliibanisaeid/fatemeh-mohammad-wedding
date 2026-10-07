@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="80" height="640" viewBox="0 0 80 640">
+  <defs>
+    <g id="petal" fill="#fffdf6" stroke="#ddd0b5" stroke-width=".65">
+      <path d="M35 35C15 26 17 6 35 4C53 6 55 26 35 35Z"/>
+      <path d="M35 28C27 21 27 12 35 10C43 12 43 21 35 28Z" fill="#faf5eb"/>
+    </g>
+    <g id="rosette">
+      <use href="#petal"/><use href="#petal" transform="rotate(60 35 35)"/>
+      <use href="#petal" transform="rotate(120 35 35)"/><use href="#petal" transform="rotate(180 35 35)"/>
+      <use href="#petal" transform="rotate(240 35 35)"/><use href="#petal" transform="rotate(300 35 35)"/>
+      <circle cx="35" cy="35" r="8" fill="#fffdf6" stroke="#ddd0b5" stroke-width=".65"/>
+      <circle cx="35" cy="35" r="3" fill="#faf5eb" stroke="#ddd0b5" stroke-width=".65"/>
+    </g>
+    <pattern id="lace" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M0 0H49Q79 20 49 40Q79 60 49 80H0Z" fill="#fffdf6" fill-opacity=".66"/>
+      <use href="#rosette" transform="translate(0 5)"/>
+      <path d="M8 0V80M13 0V80M49 0Q75 20 49 40Q75 60 49 80" fill="none" stroke="#e1d5bf" stroke-width=".8"/>
+      <path d="M35 0L64 20L35 40L64 60L35 80M64 20L15 40L64 60" fill="none" stroke="#e1d5bf" stroke-width=".5"/>
+      <g fill="#fffdf6" stroke="#ddd0b5" stroke-width=".55">
+        <circle cx="64" cy="20" r="3.5"/><circle cx="64" cy="60" r="3.5"/>
+        <circle cx="35" cy="0" r="3"/><circle cx="35" cy="80" r="3"/>
+      </g>
+    </pattern>
+  </defs>
+  <path d="M0 0H80V640H0Z" fill="url(#lace)"/>
+</svg>
