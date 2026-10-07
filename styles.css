@@ -96,6 +96,7 @@ body:is([data-state="closed"], [data-state="opening"]) { overflow: hidden; }
 .envelope-inscription { position: absolute; inset: 59% 8% auto; z-index: 6; display: flex; flex-direction: column; align-items: center; transition: opacity .25s; }
 .envelope-label { font-size: 10px; color: var(--muted); }
 .envelope-names { display: block; font-family: Nastaliq, serif; font-size: clamp(30px, 7.3vw, 40px); line-height: 2.1; white-space: nowrap; }
+.envelope-names-en { font: 12px/1.6 Georgia, serif; color: var(--muted); letter-spacing: .03em; white-space: nowrap; }
 .names-and { font-size: .48em; color: var(--gold); display: inline-block; vertical-align: .18em; margin-inline: .35em; }
 .envelope-date { font-size: 11px; color: var(--gold); margin-top: 4px; }
 .seal-shine { position: absolute; top: 39.7%; left: 45%; width: 10%; height: 11%; z-index: 6; border-radius: 50%; background: radial-gradient(ellipse, rgba(255, 230, 164, .35), transparent 70%); animation: seal-glow 2200ms 3100ms ease-in-out both; pointer-events: none; }
@@ -106,6 +107,7 @@ body:is([data-state="closed"], [data-state="opening"]) { overflow: hidden; }
 .mini-letter .mini-portrait { aspect-ratio: 914 / 565; height: auto; object-fit: cover; object-position: 50% 69.1%; }
 .mini-flower { display: block; width: 20px; height: 20px; margin: 0 auto 6px; color: var(--gold); }
 .mini-names { display: block; font-family: Nastaliq, serif; font-size: 28px; line-height: 2; }
+.mini-names-en { display: block; font: 10px/1.6 Georgia, serif; color: var(--muted); }
 .mini-line { display: block; font-size: 8px; color: var(--muted); }
 .open-prompt { align-self: start; margin-top: 22px; font-size: 12px; line-height: 2; color: var(--muted); animation: copy-arrival 1800ms 700ms var(--quiet-ease) both; transition: opacity 650ms var(--quiet-ease); }
 
@@ -136,6 +138,7 @@ body[data-state="revealing"] .cover { pointer-events: none; animation: cover-dep
 .name-arch::before { content: ""; position: absolute; inset: 5px 6px -4px; border: 1px solid #c7ac783c; border-bottom: 0; border-radius: inherit; pointer-events: none; }
 .arch-flower { width: 27px; height: 27px; padding: 4px; color: var(--gold); position: absolute; top: 0; right: calc(50% - 13.5px); transform: translateY(-50%); background: var(--paper); }
 .name-arch h1 { position: relative; font-family: Nastaliq, serif; font-size: clamp(42px, 7vw, 68px); font-weight: 400; line-height: 2.25; white-space: nowrap; outline: none; }
+.couple-names-en { display: block; font: 23px/1.6 Georgia, serif; color: var(--muted); letter-spacing: .04em; margin-top: -8px; padding-bottom: 10px; }
 .invitation-copy { max-width: 500px; margin: 0 auto; }
 .invitation-line { font-family: Nastaliq, serif; margin-top: 12px; font-size: 24px; line-height: 2.3; }
 .poetic-line { color: var(--muted); font-size: 14px; line-height: 2.2; margin-top: 8px; }
@@ -198,6 +201,7 @@ body:is([data-state="revealing"], [data-state="open"]) .invitation { transform-o
   .corner-bl { bottom: 6px; left: 6px; }
   .name-arch { margin-top: 25px; padding-top: 16px; margin-bottom: 18px; }
   .name-arch h1 { font-size: clamp(31px, 10.8vw, 49px); line-height: 2.4; }
+  .couple-names-en { font-size: 18px; letter-spacing: .02em; margin-top: -5px; padding-bottom: 7px; }
   .small-label { font-size: 11px; }
   .invitation-line { font-size: 22px; margin-top: 7px; }
   .couple-scene { margin: 20px -22px 0; }
@@ -215,8 +219,9 @@ body:is([data-state="revealing"], [data-state="open"]) .invitation { transform-o
   .cover-copy { font-size: 12px; line-height: 1.95; margin-top: 4px; }
   .envelope-area { width: min(228px, 64vw, 32svh); }
   .open-prompt { margin-top: 18px; }
-  .envelope-inscription { top: 56.5%; }
-  .envelope-names { font-size: clamp(20px, 7vw, 26px); line-height: 1.8; }
+  .envelope-inscription { top: 54.5%; }
+  .envelope-names { font-size: clamp(18px, 6.6vw, 24px); line-height: 1.7; }
+  .envelope-names-en { font-size: 10px; }
   .envelope-label { font-size: 8px; line-height: 1.5; }
   .envelope-date { font-size: 9px; line-height: 1.5; margin-top: 2px; }
 }
